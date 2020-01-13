@@ -1,0 +1,262 @@
+#mainstage {
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    margin:0px;
+    padding:0px;
+    filter: blur(7px) url(#svgFilter);
+}
+
+body {
+background: black;
+margin:0px;
+padding:0px;
+overflow: hidden;
+letter-spacing: 2px;
+transition: background 1s;
+cursor: none;
+//cursor: url(../images/basic-circle-cursor.svg) 5 5, auto;
+}
+
+#svgFilter {
+    width:100%;
+    height:100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#center-container{
+    position: absolute;
+    margin: auto;
+}
+
+#logo {
+    font-size: 58px;
+    font-family: 'Gelasio', serif;
+    color: white;
+    width: 100%;
+}
+
+#title{
+    font-family: 'Gelasio', serif;
+    color: white;
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 6px;
+}
+
+#opening-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#water-background {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#title-container {
+    opacity: 0;
+}
+
+.fade-title-container-in {
+    animation: fadein ease 2s 1s both;
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+.fadeout {
+    animation: fadeout ease 1s 0s both;
+}
+
+.fadein {
+    animation: fadein ease 2s 1s both;
+}
+
+.nav-elements {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    animation: fadein ease 2s 6s backwards;
+    letter-spacing: 3px;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+// .nav-elements:hover ~ #cursor {
+//     height: 100px !important;
+//     width: 100px !important;
+//     opacity: 0.05 !important;
+//     transform: translate(-50px, -50px) !important;
+// }
+
+.grow {
+    height: 100px;
+    width: 100px;
+    opacity: 0.05;
+    transform: translate(-50px, -50px);
+}
+
+.shrink {
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+    transform: translate(-20px, -20px);
+}
+
+.nav-elements:hover {
+    opacity: 0.65;
+}
+
+#format-about {
+    position: absolute;
+    width: 60px;
+    height: 100vh;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#format-contact {
+    position: absolute;
+    width: 60px;
+    height: 100vh;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#format-projects {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#About {
+    transform: rotate(-90deg);
+}
+
+#Projects {
+    
+}
+
+#Contact {
+    transform: rotate(-90deg);
+}
+
+#cursor {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    height: 70px;//40
+    width: 70px;//40
+    border: 3px solid white;
+    border-radius: 50%;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-35px, -35px);//20
+    transition: width 200ms, height 200ms, opacity 250ms, transform 200ms, border 200ms;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: inherit;
+}
+
+#loading-progress {
+    width: 100%;
+    height: 100%;
+    transform: translateY(17%);
+    opacity: 1;
+    color: white;
+    text-align: center;
+    font-size: 33px;
+    font-family: 'Gelasio', serif;
+    transition: 300ms;
+}
+
+#loading-screen {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background-color: black;
+    z-index: 20;
+    transition: 2000ms;
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 800px) {
+
+    #logo {
+        font-size: 41px;
+    }
+    
+    #title{
+        font-size: 21px;
+    }
+    * {
+        transition: 0s !important;
+    }
+    
+}
+
+_:-ms-lang(x), #mainstage {
+
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    margin:0px;
+    padding:0px;
+    filter: blur(18px);
+    }
+
+html{
+    visibility: visible;
+}
+
+_::-webkit-full-page-media, _:future, :root #mainstage {
+
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    margin:0px;
+    padding:0px;
+    filter: blur(18px);
+  
+  }
+
+_::-webkit-full-page-media, _:future, :root #svgFilter {
+
+    display: none;
+
+}

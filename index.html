@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html {
+          visibility: hidden;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Gelasio&display=swap" rel="stylesheet">
+    <title>Jacob Cafiero | Web Developer</title>
+
+</head>
+<body>
+    <div style="position: relative;">
+        <!-- background contents -->
+        <div id="water-background">
+            <canvas id="mainstage"></canvas>
+            <svg id="weirdFilter">
+                <filter id="svgFilter">
+                    <feTurbulence id="turbulence" type="turbulence" baseFrequency="0.012" numOctaves="6"></feTurbulence>
+                    <feDisplacementMap id="displacement" in="SourceGraphic" scale="260"
+                    xChannelSelector="A" yChannelSelector="A"></feDisplacementMap>
+                </filter>
+            </svg>
+        </div>
+        <!-- opening container contents -->
+        <div id="opening-container">
+            <div id="title-container">
+                <h1 id="logo">Jacob Cafiero</h1>
+                <h2 id="title">Web Developer</h2>
+            </div>
+        </div>
+        <!-- about container contents -->
+        <div class="animate-about" id="about-container">
+            <h1 class="fade-title" id="about-current-page-title">About</h1>
+            <div id="about-text">
+                <!-- <div class="scale-in-left" id="about-image"></div> -->
+                <h2 class="fade-in-left" id="about-intro-title">Hi, I'm Jacob Cafiero, a full-stack web developer.</h2>
+                <div class="fade-in-left" id="little-line"></div>
+                <div class="fade-in-left" id="about-text-content">
+                    In a growing, vast sea of technology, I know I could never know everything, or fully master anything, but this is exactly why I am a Web Developer. Every time I begin a new project, I am excited by the challenge it poses. This is because I know it will offer opportunities to problem solve and inspiration to create innovative designs. 
+                </div>
+            </div>
+            <div id="about-skills-container">
+                <div class="fade-up-and-in about-list-element">
+                    <img class="scale-in about-icons" src="./src/images/design-icon.svg">
+                    <h3 class="fade-up-and-in about-skill-heads">Design</h3>
+                    <div class="fade-in little-lines"></div>
+                    <p class="fade-up-and-in about-skill-description">I create design that values both practicality and creativity.</p>
+                    <ul class="fade-up-and-in about-lists">
+                        <li><span class="about-list-start">Design Tools:</span></li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Figma</li>
+                        <li>Blender</li>
+                    </ul>
+                </div>
+                <div class="about-list-element">
+                    <img class="scale-in about-icons" src="./src/images/html-icon.svg">
+                    <h3 class="fade-up-and-in about-skill-heads">Front-end</h3>
+                    <div class="fade-in little-lines"></div>
+                    <p class="fade-up-and-in about-skill-description">I develop front-end clients with a focus on speed and perfomance.</p>
+                    <ul class="fade-up-and-in about-lists">
+                        <li><span class="about-list-start">Technologies:</span></li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div id="last-elem-about" class="about-list-element">
+                    <img class="scale-in about-icons" src="./src/images/server-icon.svg">
+                    <h3 class="fade-up-and-in about-skill-heads">Back-end</h3>
+                    <div class="fade-in little-lines"></div>
+                    <p class="fade-up-and-in about-skill-description">I work back-end data into projects using a variety of client-server structures.</p>
+                    <ul class="fade-up-and-in about-lists">
+                        <li><span class="about-list-start">Technologies:</span></li>
+                        <li>Node.js</li>
+                        <li>PHP</li>
+                        <li>PostgreSQL</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- projects container contents -->
+        <div id="projects-container">
+            <h1 class="projects-title-fade" id="projects-current-page-title">Projects</h1>
+            <div class="large-fade-in" id="projects-view-area">
+               <!-- <div class="project-frame"> 
+                    <div id="terr-trav-elem" class="project-elem 1">
+                        <div class="project-elem-title"><h3 >Terrestrial Traveler</h3><p>Web-based Game</p>
+                        </div>
+                        <div class="inside-project-elem">
+                            <div class="info-inside-elem">
+                                <h4 class="title-inside-elem"></h4>
+                                <h5 class="subtitle-inside-elem"></h5>
+                                <p class="description-inside-elem"></p>
+                                <a class="link-inside-elem" href=""></a>
+                            </div>
+                            <div class="projects-inside-slide-area">
+                                <img src="./src/images/arrow.svg" class="left-arrow">
+                                <img src="./src/images/arrow.svg" class="right-arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-frame">
+                    <div id="social-site-elem" class="project-elem 2"></div>
+                </div>
+                <div class="project-frame">
+                    <div id="cbbd-elem" class="project-elem 3"><p>Coming Soon</p></div>
+                </div> -->
+            </div>
+            <img class="cursor-hover-interact arrow-fade-in" src="./src/images/arrow.svg" id="up-arrow">
+            <img class="cursor-hover-interact arrow-fade-in" src="./src/images/arrow.svg" id="down-arrow">
+        </div>
+        <!-- contact container contents -->
+        <div id="contact-container">
+            <h1 class="fade-contact-title" id="contact-current-page-title">Contact</h1>
+            <div id="contact-layout">
+                <div class="fade-contact-up" id="contact-statement">Have a website in mind? Let's get in touch.</div>
+                <div class="fade-contact-up" id="contact-additional-info">
+                    <ul id="contact-list">
+                        <li class="contact-list-elem">name: Jacob B. Cafiero</li>
+                        <li class="contact-list-elem">email: <a class="contact-links cursor-hover-interact" href="mailto:jacob@jacobcafiero.dev?subject=Interest%20in%20website&body=I'm%20interested%20in%20your%20web%20services%0D%0A">jacob@jacobcafiero.dev</a></li>
+                        <li class="contact-list-elem">location: <a class="contact-links cursor-hover-interact" href="https://goo.gl/maps/1NgFGHRqswuwahNx7" target="_blank">Petaluma, CA</a></li>
+                    </ul>
+                </div>
+                <form action="POST" action="/" data-netlify="true" class="fade-form-in" id="contact-form">
+                    <input style="margin-top: 0;" placeholder="name" type="text" class="cursor-hover-interact generalContactForm" name="name" id="nameTextInput">
+                    <input placeholder="email" type="text" class="cursor-hover-interact generalContactForm" name="email" id="emailTextInput">
+                    <textarea placeholder="message" name="message" class="cursor-hover-interact generalContactForm" id="messageTextArea" cols="30" rows="10"></textarea>
+                    <input type="submit" name="submit" class="cursor-hover-interact" id="send-button" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- navigation elements - free floating -->
+    <div id="format-about">
+        <div class="nav-elements cursor-hover-interact" id="About">About</div>
+    </div>
+    <div id="format-projects">
+        <div class="nav-elements cursor-hover-interact" id="Projects">Projects</div>
+    </div>
+    <div id="format-contact">
+        <div class="nav-elements cursor-hover-interact" id="Contact">Contact</div>
+    </div>
+
+    <div id="loading-screen">
+
+    </div>
+
+    <div id="cursor"><div id="loading-progress">0</div></div>
+</body>
+</html>

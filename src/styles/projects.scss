@@ -1,0 +1,295 @@
+#projects-container {
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    position: absolute;
+    display: none;
+}
+
+#projects-current-page-title {
+    font-size: 58px;
+    font-family: 'Gelasio', serif;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+}
+
+.project-elem {
+    width: 50vw;
+    height: 28.125vw;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 400ms;
+    position: relative;
+    background: rgb(20, 20, 20);
+}
+
+.selected-elem {
+    background: none;
+    width: 65vw;
+    height: 36.5625vw;
+}
+
+#projects-view-area {
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: 400ms;
+}
+
+.project-frame {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#up-arrow {
+    position: absolute;
+    left: 50%;
+    top: 13vh;
+    width: 20px;
+    height: 100px;
+    transform: translateX(-10px) rotate(180deg);
+}
+
+#down-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 9vh;
+    width: 20px;
+    height: 100px;
+    transform: translateX(-10px);
+}
+
+.project-elem-title {
+    font-family: 'Gelasio', serif;
+    color: white;
+    position: absolute;
+    letter-spacing: 4px;
+    bottom: -75px;
+    left: 0px;
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.inside-project-elem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+.arrow-fade-in {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.info-inside-elem {
+    float: left;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: rgb(20, 20, 20);
+}
+
+.title-inside-elem {
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: white;
+    font-family: 'Gelasio', serif;
+    margin-left: 10%;
+    width: 80%;
+}
+.subtitle-inside-elem {
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: white;
+    font-family: 'Gelasio', serif;
+    padding: 0;
+    margin-left: 10%;
+    width: 80%;
+}
+.description-inside-elem {
+    font-size: 15px;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    line-height: 25px;
+    letter-spacing: 3.1px;
+    margin-left: 10%;
+    width: 80%;
+}
+.link-inside-elem {
+    font-size: 15px;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 3.1px;
+    margin-left: 10%;
+    width: 80%;
+    opacity: 0.5;
+}
+.arrow-container {
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-items: center;
+}
+.left-arrow {
+    height: 100px;
+    width: 20px;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 41%;
+    left: 25px;
+}
+.right-arrow {
+    height: 100px;
+    width: 20px;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 41%;
+    right: 25px;
+}
+
+.projects-inside-slide-area {
+    float: right;
+    position: relative;
+    width: 65%;
+    height: 100%;
+}
+
+.project-elem-title-content {
+    font-size: 30px;
+    margin: 5px;
+}
+.project-elem-subtitle-content {
+    font-size: 18px;
+    margin: 0;
+}
+
+@media (max-width: 1500px) {
+    .title-inside-elem {
+        font-size: 18px;
+        letter-spacing: 3px;
+        color: white;
+        font-family: 'Gelasio', serif;
+        margin-left: 10%;
+        width: 80%;
+        line-height: 16px;
+    }
+    .subtitle-inside-elem {
+        font-size: 16px;
+        letter-spacing: 3px;
+        color: white;
+        font-family: 'Gelasio', serif;
+        padding: 0;
+        margin-left: 10%;
+        width: 80%;
+        line-height: 14px;
+    }
+    .description-inside-elem {
+        font-size: 14px;
+        color: white;
+        font-family: Helvetica, sans-serif;
+        line-height: 25px;
+        letter-spacing: 3.1px;
+        margin-left: 10%;
+        width: 80%;
+        line-height: 17px;
+    }
+    .link-inside-elem {
+        font-size: 14px;
+        color: white;
+        font-family: Helvetica, sans-serif;
+        letter-spacing: 3.1px;
+        margin-left: 10%;
+        width: 80%;
+        opacity: 0.5;
+        line-height: 12px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .title-inside-elem {
+        font-size: 13px;
+        letter-spacing: 3px;
+        color: white;
+        font-family: 'Gelasio', serif;
+        margin-left: 5%;
+        width: 90%;
+        line-height: 12px;
+    }
+    .subtitle-inside-elem {
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: white;
+        font-family: 'Gelasio', serif;
+        padding: 0;
+        margin-left: 5%;
+        width: 90%;
+        line-height: 12px;
+    }
+    .description-inside-elem {
+        font-size: 8px;
+        color: white;
+        font-family: Helvetica, sans-serif;
+        line-height: 25px;
+        letter-spacing: 2px;
+        margin-left: 5%;
+        width: 90%;
+        line-height: 12px;
+    }
+    .link-inside-elem {
+        font-size: 8px;
+        color: white;
+        font-family: Helvetica, sans-serif;
+        letter-spacing: 2px;
+        margin-left: 5%;
+        width: 90%;
+        opacity: 0.5;
+        line-height: 12px;
+    }
+
+    @media (max-width: 800px) {
+        .description-inside-elem {
+            display: none;
+        }
+        #up-arrow {
+            position: absolute;
+            left: 50%;
+            top: 23vh;
+            width: 20px;
+            height: 100px;
+            transform: translateX(-10px) rotate(180deg);
+        }
+        
+        #down-arrow {
+            position: absolute;
+            left: 50%;
+            bottom: 20vh;
+            width: 20px;
+            height: 100px;
+            transform: translateX(-10px);
+        }
+        
+    }
+    #projects-current-page-title {
+        font-size: 48px;
+        font-family: 'Gelasio', serif;
+        color: white;
+        text-align: center;
+        width: 100%;
+        height: 2.5vh;
+    }
+}
